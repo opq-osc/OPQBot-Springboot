@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageLogger {
     @EventListener
-    public void Message(Event event) {
+    public void Message(GroupMessageEvent event) {
         var eventData = event.getMsgBodyVO().getCurrentPacket().getEventData();
         var msgHead = eventData.getMsgHead();
         var msgBody = eventData.getMsgBody();
